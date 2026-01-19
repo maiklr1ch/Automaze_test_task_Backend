@@ -7,12 +7,13 @@ app = FastAPI()
 origins = [
     "http://localhost",
     "http://localhost:3000",
-    "https://automaze-test-task-frontend-chi.vercel.app/"
+    "https://automaze-test-task-frontend-chi.vercel.app/",
+    "https://automaze-test-task-frontend-kftnuubmk-k1yosakis-projects.vercel.app/",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"], # allow all origins , for simplicity and testing purposes
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
